@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+{%extends 'blank.html'%}
+{% load static %}
+{%block content%}
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Three charts -->
+                <!-- ============================================================== -->
+
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                        <div class="white-box analytics-info">
+                            <h3 class="box-title">Abundance </h3>
+                            <ul class="list-inline two-part d-flex align-items-center mb-0">
+                                <li>
+                                    <div id="sparklinedash"><canvas width="67" height="30"
+                                            style="display: inline-block; width: 67px; height: 30px; vertical-align: top;"></canvas>
+                                    </div>
+                                </li>
+                                <li class="ml-auto"><span class="counter text-success">0</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                        <div class="white-box analytics-info">
+                            <h3 class="box-title">Low in Supply</h3>
+                            <ul class="list-inline two-part d-flex align-items-center mb-0">
+                                <li>
+                                    <div id="sparklinedash2"><canvas width="67" height="30"
+                                            style="display: inline-block; width: 67px; height: 30px; vertical-align: top;"></canvas>
+                                    </div>
+                                </li>
+                                <li class="ml-auto"><span class="counter text-purple">0</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                        <div class="white-box analytics-info">
+                            <h3 class="box-title">Critically low </h3>
+                            <ul class="list-inline two-part d-flex align-items-center mb-0">
+                                <li>
+                                    <div id="sparklinedash3"><canvas width="67" height="30"
+                                            style="display: inline-block; width: 67px; height: 30px; vertical-align: top;"></canvas>
+                                    </div>
+                                </li>
+
+                                <li class="ml-auto"><span class="counter text-info">0</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- ============================================================== -->
+                <!-- PRODUCTS YEARLY SALES -->
+                <!-- ============================================================== -->
+                <div class="row">
+
+                    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<!--            <script>-->
+<!--window.onload = function () {-->
+
+<!--var chart = new CanvasJS.Chart("chartContainer", {-->
+<!--	animationEnabled: true,-->
+
+<!--	title:{-->
+<!--		text:"Executive's Performance"-->
+<!--	},-->
+<!--	axisX:{-->
+<!--		interval: 1-->
+<!--	},-->
+<!--	axisY2:{-->
+<!--		interlacedColor: "rgba(1,77,101,.2)",-->
+<!--		gridColor: "rgba(1,77,101,.1)",-->
+<!--		title: "Percentage Achieved"-->
+<!--	},-->
+<!--	data: [{-->
+<!--		type: "bar",-->
+<!--		name: "companies",-->
+<!--		axisYType: "secondary",-->
+<!--		color: "#014D65",-->
+<!--		dataPoints: [-->
+<!--            {%for item in names%}-->
+<!--			{ y: {% widthratio item.info.target_achieved item.info.target 100 %}, label: "{{item.username}}( {% widthratio item.info.target_achieved item.info.target 100 %}%)",-->
+<!--			},-->
+<!--			{%endfor%}-->
+
+<!--		]-->
+<!--	}]-->
+<!--});-->
+<!--chart.render();-->
+
+<!--}-->
+<!--</script>-->
+<!--                    <div id="chartContainer" style="height: 300px; width: 100%;"></div>-->
+
+                <!-- ============================================================== -->
+
+                    <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Three charts -->
+                <!-- ============================================================== -->
+<hr>
+
+
+
+
+
+
+{%endblock content%}
+
+                <!-- ============================================================== -->
+                <!-- Recent Comments -->
+                <!-- ============================================================== -->
+
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="https://www.creativefuel.io/dashboard/plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="https://www.creativefuel.io/dashboard/plugins/bower_components/popper.js/dist/umd/popper.min.js"></script>
+    <script src="https://www.creativefuel.io/dashboard/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://www.creativefuel.io/dashboard/js/app-style-switcher.js"></script>
+    <script src="https://www.creativefuel.io/dashboard/plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <!--Wave Effects -->
+    <script src="https://www.creativefuel.io/dashboard/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="https://www.creativefuel.io/dashboard/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="https://www.creativefuel.io/dashboard/js/custom.js"></script>
+    <!--This page JavaScript -->
+    <!--chartis chart-->
+    <script src="https://www.creativefuel.io/dashboard/plugins/bower_components/chartist/dist/chartist.min.js"></script>
+    <script src="https://www.creativefuel.io/dashboard/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="https://www.creativefuel.io/dashboard/js/pages/dashboards/dashboard1.js"></script>
+
+</body>
+
+</html>

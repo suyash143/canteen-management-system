@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{%extends 'blank.html'%}
+{% load static %}
+{%block content%}
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+
+                <!-- ============================================================== -->
+                <!-- Three charts -->
+                <!-- ============================================================== -->
+
+                <!-- ============================================================== -->
+                <!-- RECENT SALES -->
+                <!-- ============================================================== -->
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+                            <div class="d-md-flex mb-3">
+                                <h3 class="box-title mb-0">Inventory details</h3>
+
+                            <div class="table-responsive">
+                                <table class="table no-wrap">
+                                    <thead>
+                                        <tr>
+                                            <th class="border-top-0">#</th>
+                                            <th class="border-top-0">Created</th>
+                                            <th class="border-top-0">Name</th>
+                                            <th class="border-top-0">Current Stock</th>
+                                            <th class="border-top-0">Minimum stock</th>
+
+                                        </tr>
+
+                                    </thead>
+                                    <tbody>
+
+                                    {%for obj in page.object_list%}
+                                        <tr>
+                                            <td><form method="POST">{%csrf_token%} <input type="submit" value="{{obj.pk}}" name="id"></form></td>
+                                            <td >{{obj.created}}</td>
+                                            <td class="txt-oflo">{{obj.name}}</td>
+
+                                            <td class="txt-oflo">{{obj.stock}}</td>
+                                            <td class="txt-oflo">{{obj.minimum}}</td>
+                                        </tr>
+                                    {%endfor%}
+
+
+                                    </tbody>
+
+                                </table>
+                                <center>
+
+                    {% for num in page.paginator.page_range %}
+                  {% ifequal num page.number %}
+                    <span class="current"><b>{{ num }}</b></span>
+                  {% else %}
+                    <a href="?page={{ num }}"> {{ num }}</a>
+                  {% endifequal %}
+                {% endfor %}
+        {% if page.has_previous %}
+      <a href="{%url 'all'%}?page={{page.previous_page_number}}">Previous Page</a>
+
+      {% endif %}
+      {% if page.has_next %}
+
+      <a href="{%url 'all'%}?page={{page.next_page_number}}">Next Page</a>
+      {% endif %}</center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- Recent Comments -->
+                <!-- ============================================================== -->
+
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            {%endblock content%}

@@ -1,0 +1,74 @@
+{%extends 'blank.html'%}
+{%block content%}
+<div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+                            <div class="d-md-flex mb-3">
+                                <h3 class="box-title mb-0">Inventory Manage</h3>
+                                <div class="col-md-9 col-sm-15 col-xs-24 ml-auto">
+                                <form method="POST">
+                                    {%csrf_token%}
+
+                                    <select name="filter" class="form-control row border-top" onchange="this.form.submit()">
+
+                                    </select>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table no-wrap">
+                                    <thead>
+                                        <tr>
+                                            <th class="border-top-0">#</th>
+                                            <th class="border-top-0">Name</th>
+                                            <th class="border-top-0">Stock</th>
+                                            <th class="border-top-0" >Minimum</th>
+
+
+                                        </tr>
+
+                                    </thead>
+                                    <tbody>
+                                        {%for obj in script%}
+
+                                        <tr>
+
+                                            <td><form method="POST">{%csrf_token%} <input type="submit" value="{{obj.pk}}" name="id"></form></td>
+
+
+                                            <td >{{obj.name}}</td>
+                                            <td class="txt-oflo">
+                                                {{obj.stock}}
+                                                </td>
+                                            <td class="txt-oflo">
+                                                {{obj.minimum}}
+
+                                            </td>
+
+
+
+                                            <script>
+
+                                                function execCopy{{obj.pk}}() {
+                                                  document.getElementById("{{obj.pk}}").select();
+                                                  document.execCommand("copy");
+                                                }
+                                            </script>
+
+                                        </tr>
+                                        {%endfor%}
+
+
+                                    </tbody>
+
+                                </table>
+
+                                {%if request.user.is_staff%}
+                                <a href="{%url 'dashboard_inventory_add'%}" target="_blank"
+                                class="btn btn-danger   waves-effect waves-light">Add Inventory Item</a>
+                                {%endif%}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+{%endblock content%}

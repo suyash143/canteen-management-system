@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+{%extends 'blank.html'%}
+{% load static %}
+{%block content%}
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+
+                <!-- ============================================================== -->
+                <!-- Three charts -->
+                <!-- ============================================================== -->
+
+                <!-- ============================================================== -->
+                <!-- RECENT SALES -->
+                <!-- ============================================================== -->
+                <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <!-- Row -->
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-lg-4 col-xlg-3 col-md-12">
+                        <div class="white-box">
+                            <div class="user-bg"> <img width="100%" alt="user" src="https://www.nicepng.com/png/full/202-2022660_edit-user-profile-comments-edit-profile-icon-png.png">
+                                <div class="overlay-box">
+                                    <div class="user-content">
+                                        <a href="javascript:void(0)"><img src="https://cdn4.iconfinder.com/data/icons/instagram-ui-twotone/48/Paul-18-512.png"
+                                                class="thumb-lg img-circle" alt="img"></a>
+                                        <h4 class="text-white mt-2"><strong>{{request.user.username}} adding leads</strong></h4>
+                                        <h5 class="text-white mt-2"></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user-btm-box mt-5 d-md-flex">
+
+                                <div class="col-md-4 col-sm-4 text-center">
+                                    <h1>{{name.id}}</h1>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-lg-8 col-xlg-9 col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <form class="form-horizontal form-material" method="POST">
+                                    {%csrf_token%}
+                                     <div class="form-group mb-4">
+                                        <label class="col-md-12 p-0">Name</label>
+                                        <div class="col-md-12 border-bottom p-0">
+                                            <input type="text" placeholder="Enter Name"
+                                                class="form-control p-0 border-0" name="name"> </div>
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <label class="col-md-12 p-0">Contact Number</label>
+                                        <div class="col-md-12 border-bottom p-0">
+                                            <input  type="number" placeholder="Contact Number"
+                                                class="form-control p-0 border-0" name="number"> </div>
+                                    </div>
+
+
+                                    <div class="form-group mb-4">
+                                        <label class="col-md-12 p-0">Select Goal</label>
+                                        <div class="col-md-12 border-bottom p-0">
+                                            <select name="goal" class="form-control p-0 border-0">
+                                                <option value="muscle_gain">Muscle Gain</option>
+                                                <option value="weight_loss">Weight Loss</option>
+
+                                            </select>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <label class="col-md-12 p-0">Preferred Mode of Contact</label>
+                                        <div class="col-md-12 border-bottom p-0">
+                                            <select name="prefered" class="form-control p-0 border-0">
+                                                <option value="Whatsapp">Whatsapp</option>
+                                                <option value="Call">Call</option>
+
+                                            </select>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <label class="col-md-12 p-0">Height In feet</label>
+                                        <div class="col-md-12 border-bottom p-0">
+                                            <input type="number" placeholder="Height"
+                                                class="form-control p-0 border-0" name="foot" > </div>
+                                    </div>
+
+                                    <div class="form-group mb-4">
+                                        <label class="col-md-12 p-0">Height in Inches</label>
+                                        <div class="col-md-12 border-bottom p-0">
+                                            <input type="number" placeholder="Inches"
+                                                class="form-control p-0 border-0" name="inch" > </div>
+                                    </div>
+
+                                    <div class="form-group mb-4">
+                                    <label class="col-md-12 p-0">Gender</label>
+                                    <div class="col-md-12 border-bottom p-0">
+                                    <select name="gender" class="form-control p-0 border-0">
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+
+                                    </select>
+                                    </div>
+                                    </div>
+
+                                    <div class="form-group mb-4">
+                                        <label class="col-md-12 p-0">Weight</label>
+                                        <div class="col-md-12 border-bottom p-0">
+                                            <input type="number" placeholder="Weight"
+                                                class="form-control p-0 border-0" name="weight" > </div>
+                                    </div>
+
+
+                                    <div class="form-group mb-4">
+                                        <div class="col-sm-12">
+                                             <input class="btn btn-success" type="submit" onclick="myFunction()">
+                                        </div>
+                                    </div>
+                                        <script>
+                                    var form = document.getElementById('updateform');
+
+                                    function myFunction() {
+                                      if (form.checkValidity()) {
+                                        alert("Edited Successfully");
+                                      }
+                                    }
+                                    </script>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>
+                <!-- ============================================================== -->
+                <!-- Recent Comments -->
+                <!-- ============================================================== -->
+
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+          {%endblock content%}
