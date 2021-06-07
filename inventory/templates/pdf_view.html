@@ -1,0 +1,376 @@
+<head>
+<style>
+body {
+  font-family: 'lato', sans-serif;
+}
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+
+}
+
+th {
+  font-size: 14px;
+  margin: 20px 0;
+  text-align: center;
+
+}
+
+td {
+  font-size: 14px;
+  margin: 20px 0;
+  text-align: center;
+
+}
+</style>
+    <style type="text/css">
+            @page {
+                size: A4;
+                margin: 1cm;
+                @frame footer {
+                    -pdf-frame-content: footerContent;
+                    bottom: 0cm;
+                    margin-left: 9cm;
+                    margin-right: 9cm;
+                    height: 1cm;
+
+                }
+            }
+        </style>
+</head>
+<body >
+
+<div class="container" style="">
+    <h2>Welcome to Wefit Transformation plan</h2>
+    <img src="https://www.creativefuel.io/dashboard/wefitnutrition/{{img_url}}">
+
+  <ul class="responsive-table">
+    <li class="table-header">
+
+<style>
+    @page {
+    background-image: url('https://www.creativefuel.io/dashboard/wefitnutrition/watermark.png');
+}
+</style>
+
+
+    </li>
+  </ul>
+
+</div>
+<div  >
+
+
+</div>
+    <table border="1px">
+        <tr></tr>
+        <tr>
+            <th>
+                Client ID Number
+            </th>
+            <td>{{data.id}}</td>
+        </tr>
+
+        <tr>
+            <th>
+            Client Name
+            </th>
+            <td>{{data.name}}</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>
+                Mobile Number
+            </th>
+            <td>{{data.number}}</td>
+        </tr>
+
+<tr></tr>
+        <tr>
+            <th>
+                Email Address
+            </th>
+            <td>{{data.email}}</td>
+        </tr>
+<tr></tr>
+           <tr>
+            <th>
+                Age
+            </th>
+            <td>{{data.age}}</td>
+        </tr>
+<tr></tr>
+           <tr>
+            <th>
+                Gender
+            </th>
+            <td>{{data.gender}}</td>
+        </tr>
+<tr></tr>
+        <tr>
+            <th>
+             City
+            </th>
+            <td>{{data.city}}</td>
+        </tr>
+<tr></tr>
+        <tr>
+            <th>
+             State
+            </th>
+            <td>{{data.state}}</td>
+        </tr>
+<tr></tr>
+
+        <tr>
+            <th>
+                Country
+            </th>
+            <td>{{data.country}}</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>
+             Zip Code
+            </th>
+            <td>{{data.zipcode}}</td>
+        </tr>
+<tr></tr>
+        <tr>
+            <th>
+                Instagram Username
+            </th>
+            <td>{{data.insta_user}}</td>
+        </tr>
+<tr></tr>
+        <tr>
+            <th>
+             Weight
+            </th>
+            <td>{{data.weight}} Kg.</td>
+        </tr>
+<tr></tr>
+        <tr>
+            <th>
+             Height
+            </th>
+            <td>{{data.height}} M.</td>
+        </tr>
+<tr></tr>
+        <tr>
+            <th>
+             BMI
+            </th>
+            <td>{{data.bmi}}</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>
+             Goal
+            </th>
+            <td>{{data.goal}}</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>
+             Form Submitted On
+            </th>
+            <td>{{data.created}}</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>
+             Daily Diet
+            </th>
+            <td>{{data.daily_diet}}</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>
+             Sports
+            </th>
+            <td>{{data.sports}}</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>
+             Daily Wakeup Time
+            </th>
+            <td>{{data.wakeup_time}}</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>
+             Unliked Food
+            </th>
+            <td>{{data.unliked_food}}</td>
+        </tr>
+
+        <tr></tr>
+        <tr>
+            <th>
+             Supplements
+            </th>
+            <td>{{data.supplements}}</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>
+             Reason for not taking supplements
+            </th>
+            <td>{{data.supplement_wish}}</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>
+             Current Residence
+            </th>
+            <td>{{data.place}}</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>
+             Diet Preference
+            </th>
+            <td>{{data.diet}}</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>
+             Diet Preference
+            </th>
+            <td>{{data.diet}}</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>
+             Any Previous Workout Experience
+            </th>
+            <td>{{data.previous_workout}}</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>
+             Diseases
+            </th>
+            <td>{{data.disease}}</td>
+        </tr>
+<tr></tr>
+        <tr>
+            <th>
+             Daily meals prepared by
+            </th>
+            <td>{{data.meal_prep}}</td>
+        </tr>
+<tr></tr>
+        <tr>
+            <th>
+             Medication Status
+            </th>
+            <td>{{data.meds}}</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>
+             Workout Type
+            </th>
+            <td>{{data.workout}}</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>
+             Preferred workout time
+            </th>
+            <td>{{data.workout_time}}</td>
+        </tr>
+
+
+<tr></tr>
+
+        <tr>
+            <th>
+             Available Equipments at home
+            </th>
+            <td>{{data.equipments}}</td>
+        </tr>
+<tr></tr>
+        <tr>
+            <th>
+             Daily meals prepared by
+            </th>
+            <td>{{data.meal_prep}}</td>
+        </tr>
+<tr></tr>
+        <tr>
+            <th>
+             Injury or Disease status
+            </th>
+            <td>{{data.injury}}</td>
+        </tr>
+        <tr>
+            <th>
+             Telegram Mobile Number
+            </th>
+            <td>{{data.telegram}}</td>
+        </tr>
+
+
+
+    </table>
+<br>
+<br>
+<hr>
+
+<br>
+<br>
+<br>
+<br>
+
+<b>Your Registered Email is : {{data.email}}</b>
+<br>
+<b>Your Client Secret Key is : {{client_secret}}</b><br>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+    <h2>Front Profile</h2>
+
+    <img src="{{data.front_profile.url}}" width="300px" >
+
+
+    <h2>Back Profile</h2>
+
+    <img src="{{data.back_profile.url}}" width="300px" >
+    <hr  >
+    <br>
+<br>
+    <br>
+<br>
+    <br>
+<br>
+    <br>
+<br>
+    <h2>Left Profile</h2>
+
+    <img src="{{data.left_profile.url}}" width="300px" >
+
+    <h2>Right Profile</h2>
+
+    <img src="{{data.right_profile.url}}" width="300px" >
+</center>
+
+</body>

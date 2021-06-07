@@ -94,10 +94,13 @@ Canteen Dashboard                        </span>
                         <!-- ============================================================== -->
                      <li class=" in">
 <!--                            <form class="app-search d-md-block mr-3" id="myform" name="myform" method="GET" action="{}">-->
+                                <form class="app-search d-md-block mr-3" id="myform" name="myform" method="GET" action="{% url 'inventory_search' %}">
                                 {% csrf_token %}
                                 <input type="text" onchange="this.form.submit()" name="search" placeholder="Search" class="form-control mt-0">
 
                                     <i class="bx bx-search"></i>
+
+                            </form>
 
 <!--                            </form>-->
                         </li>
@@ -138,7 +141,7 @@ Canteen Dashboard                        </span>
                             </a>
                         </li>
 
-
+                        {%if request.user.is_staff%}
 
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{%url 'dashboard_inventory'%}"
@@ -157,6 +160,14 @@ Canteen Dashboard                        </span>
                             </a>
                         </li>
 
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{%url 'dashboard_create_order'%}"
+                                aria-expanded="false">
+                                <i class='bx bx-table'></i>
+                                <span class="hide-menu">Create Order</span>
+                            </a>
+                        </li>
+
 
 
                         <li class="text-center p-20 upgrade-btn">
@@ -164,6 +175,7 @@ Canteen Dashboard                        </span>
                                 class="btn btn-block btn-danger text-white" target="_blank">
                                 Download CSV</a>
                         </li>
+                        {%endif%}
                     </ul>
 
                 </nav>

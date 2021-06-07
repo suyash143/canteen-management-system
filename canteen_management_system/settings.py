@@ -107,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -134,3 +134,13 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/images/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+
+
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST_USER='suyash@we-fit.in'
+EMAIL_HOST='mail.we-fit.in'
+EMAIL_PORT= 587
+EMAIL_USE_TLS =True
+EMAIL_HOST_PASSWORD = "suyash@111"
+
+SESSION_COOKIE_AGE=60*60*12
