@@ -21,7 +21,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ad+3le())8%#%j2*a#2&149(@b)s%+1%j^bpocue)&72v39y6#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -136,11 +135,6 @@ MEDIA_URL = '/images/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
 
-EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST_USER='suyash@we-fit.in'
-EMAIL_HOST='mail.we-fit.in'
-EMAIL_PORT= 587
-EMAIL_USE_TLS =True
-EMAIL_HOST_PASSWORD = "suyash@111"
+
 
 SESSION_COOKIE_AGE=60*60*12
